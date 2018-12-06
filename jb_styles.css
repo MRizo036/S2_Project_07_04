@@ -31,6 +31,7 @@ body {
     width: 83%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.466) 10px 10px 30px, rgba(0, 0, 0, 0.466) -10px 10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 header img {
@@ -41,30 +42,35 @@ p {
     margin: 10px 20px;
 }
 
+
 dt {
     font-weight: bold;
+    text-align: center;
 }
 
 dd {
-    margin-left: 10px
+    text-align: center;
 }
 
 /* Navigation Styles */
 nav.horizontal {
     display: table;
     background-color: rgba(16, 215, 250, 0.918);
+
     list-style: none;
     width: 100%;
     padding: 5px 0px;
 }
 
 nav.horizontal>ul {
+    height: 100%;
     display: table-row;
     width: 100%;
 
 }
 
 nav.horizontal>ul>li {
+
     display: table-cell;
     float: left;
     text-align: center;
@@ -74,23 +80,57 @@ nav.horizontal>ul>li {
 
 nav.horizontal a {
     display: block;
+    color: black;
+
 }
 
-article {
+nav.horizontal li {
+    height: 100%;
+}
+
+nav.horizontal a:hover {
+    height: 100%;
+    background-color: rgb(30, 31, 32);
+    color: white;
+
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 25px;
+    font-style: italic;
+}
+
+
+
+section article {
     float: left;
     width: 55%;
+    height: 100%;
+    line-height: 20px
 }
 
-aside {
+section aside {
     float: left;
-    background-color: rgb(94, 255, 0);
     width: 45%;
+    background-color: rgb(136, 235, 248);
+    height: 100%;
+    padding-bottom: 10px
 }
 
 footer {
-    background-color: rgba(25, 105, 136, 0.918);
+    color: black;
+    background-color: rgb(147, 242, 245);
+    text-align: center;
+
 }
 
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* ul.submenu {
     display: none;
@@ -101,12 +141,68 @@ ul.submenu:hover {
     display: block;
 }
 
+/* Pulldown Menu Styles */
+ul.submenu {
+    display: none;
+}
+
+a.submenuTitle:hover+ul.submenu,
+ul.submenu:hover {
+    display: block;
+}
+
+ul.mainmenu>li {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+
+ul.submenu {
+    width: 50%;
+    box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+    position: absolute;
+}
+
 /* =================
      Mobile Styles 
    ================= */
+@media only screen and (max-width: 480px) {
+    nav.horizontal a {
+        font-size: 0.5em;
+        line-height: 2.2em;
+    }
+
+    a#navicon {
+        display: block;
+    }
+
+
+
+    a#navicon:hover+ul,
+    nav.horizontal ul:hover {
+        display: block;
+    }
+}
+
 /* =================
-     Desktop Styles 
+     Tablet Styles 
    ================= */
+
+ul.mainmenu>li {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+
+ul.submenu {
+    width: 100%;
+    box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+    position: absolute;
+    line-height: 25px;
+    background-color: rgb(221, 247, 248);
+}
+}
+
 /* =================
      Desktop Styles 
    ================= */
