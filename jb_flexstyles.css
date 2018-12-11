@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 5
+   Case Problem 4
+   
+   Author:   Maria De Jesus Rizo
+   Date:     11.30.18
+   
+   Filename: jb_flexstyles.css
+
+*/
+/* Flex Layout Styles */
+/* Styles listed within the slector will be applied to the body element of the HTML document. The display property states that the body element will have the display properties of a flex layout. The flex flow property states that the content in the body will be aligned by column and wrap around one another. */
+body{
+    display: flex;
+    flex-flow: column wrap;
+}
+/* The selector below states that the headre will have be the full width of its container. */
+header{
+    width: 100%;
+}
+/* The selector below states that the footer element will have be the full width of its container. */
+footer{
+    width: 100%;
+}
+/* The selector below states that the aside element in the HTML document will be affected by the styles within. The flex property states that the elemeny will grow and shrink at a rate of one  from its basis size which is set to auto. the webkit flex property allows for more browsers to be able to render the properties listed.*/
+aside {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+} 
+/* The comment from above applies here as well, the only difference being that the article element is being affected.  */
+  article {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+/* Flex Order Styles */
+/* The selector below states that the article element will be placed as 99 in the order of elements displayed on the page. */
+article {
+    -webkit-order: 99;
+    order: 99;
+    }
+/* The selector states that the footer element will be placed as 100 in the order of elements displayed on the page, below the article element. */
+footer {
+    -webkit-order: 100;
+    order: 100;
+    }
+

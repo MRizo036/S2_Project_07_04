@@ -16,6 +16,8 @@
 */
 
 /* General Styles */
+/* Styles within this section will affect the entire HTML document. The background img property states that the background of the page will be the image provided. The background size property states that the background image will cover the entirety of the page. The no repeat property states that the background  image will not be repeated in the background of the page.
+The background attachment property states that the background image will not scroll when the user scrolls down on the page. The width property states that the html element will have the width of the entire page. */
 html {
     background-image: url(jb_back1.png);
     background-size: cover;
@@ -24,185 +26,293 @@ html {
     width: 100%;
 }
 
+/* The selector states that the properties nested within will affect the body element in the HTML.The backgroud color property specifies the background color of the element. The argin left and margin right properties align the body in th center of the page.
+The width property gived=s the body a width of 80% of the page. The height element gievs the body a height of 100% of the page.
+The boxshadow property applies a boxshadow to the left and right of the body element of the specified dimensions.The font family property specifies the font of the text on the page. */
 body {
     background-color: rgb(226, 244, 247);
     margin-left: auto;
     margin-right: auto;
-    width: 83%;
+    width: 80%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.466) 10px 10px 30px, rgba(0, 0, 0, 0.466) -10px 10px 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* The selector below states that the img nested within the header element will have a width of 100% its container.*/
 header img {
     width: 100%;
 }
 
+/* The selector below states that the p element will have a margin of the specified dimensions around it (10px top and bottom, 20px left and right). */
 p {
     margin: 10px 20px;
 }
-
-
-dt {
-    font-weight: bold;
+/* The selector states that the h1 element in the HTML document will be affected. The font size property states that the size of the font will be the sepcifies dimenion. The text align property aligns the text to the center of the parent element. The padding property adds padding around the element of the specified dinmensions (30px all around). The font style property states that the text will be italic. */
+h1 {
+    font-size: 50px;
     text-align: center;
+    padding: 30px;
+    font-style: italic;
 }
-
-dd {
-    text-align: center;
+/* Styles within this section will affect the hr elements in the HTML document. The border color property gives the horizontal rule the specified color. */
+hr{
+    width: 85%;
+    border-color: black;
 }
 
 /* Navigation Styles */
+/* Styles within this section will affect the nav element and any other elements nested within the nav element in the HTML document. */
+/* The selector below states that the nav with a class of horizontal will be affected by the styles provided. The display property gives the element the display properties of a table element. The the list style property removes any bullets that the elements may have been given by default.  */
 nav.horizontal {
     display: table;
-    background-color: rgba(16, 215, 250, 0.918);
-
+    background-color: rgba(16, 18, 19, 0.918);
     list-style: none;
     width: 100%;
     padding: 5px 0px;
 }
-
+/* The selector below states that the ul that is a child of the nav element with a class of horizontal will be affected by the styles provided. The display property gives the element the display properties of a table row.  */
 nav.horizontal>ul {
-    height: 100%;
     display: table-row;
     width: 100%;
-
 }
-
+/* The selector below states that li elements that are children of ul elements that are children of the nav element with a class of horizontal will be affected by the styles. The display property gives the element the display proeprties of a table-cell. The float property states that the element will float to the left of its container. */
 nav.horizontal>ul>li {
-
     display: table-cell;
     float: left;
     text-align: center;
     width: 16.5%;
-
 }
-
+/* The selector below states that the a element nested within the nav element with a class of horizontal will be affected by the listed styles. The display property gives the element the display properties of a block level element. The color property specifies the color of the text. */
 nav.horizontal a {
     display: block;
-    color: black;
-
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px;
 }
-
-nav.horizontal li {
-    height: 100%;
+/* The selector below state that the a element nested within the ul with a class of submenu will be affected by the style listed.  */
+ul.submenu a {
+    color: rgb(0, 0, 0);
 }
-
-nav.horizontal a:hover {
-    height: 100%;
+/* The selector below states that the properties listed will affect the a element nested within the nav element with a class of horizontal when in the state of being hovered over. */
+nav.horizontal a:hover{
     background-color: rgb(30, 31, 32);
-    color: white;
-
-}
-
-h1 {
-    font-size: 50px;
-    text-align: center;
-    padding: 25px;
+    color: rgb(255, 255, 255);
     font-style: italic;
 }
 
-
-
-section article {
-    float: left;
-    width: 55%;
-    height: 100%;
-    line-height: 20px
-}
-
-section aside {
-    float: left;
-    width: 45%;
-    background-color: rgb(136, 235, 248);
-    height: 100%;
-    padding-bottom: 10px
-}
-
-footer {
-    color: black;
-    background-color: rgb(147, 242, 245);
-    text-align: center;
-
-}
-
-section::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* ul.submenu {
-    display: none;
-} */
-
-a.submenuTitle:hover+ul.submenu,
-ul.submenu:hover {
-    display: block;
-}
-
-/* Pulldown Menu Styles */
+/* Pulldown Navigation Styles */
+/* Styles withn this section will affect the ul element with class of submenu. The boxshadow property applies a shodo around the element of the specified color and dimensions. The position property states that the element will not move from its position no matter what. The line height property provides spsacing in between each line of text in the element being affected. */
 ul.submenu {
     display: none;
-}
-
-a.submenuTitle:hover+ul.submenu,
-ul.submenu:hover {
-    display: block;
-}
-
-ul.mainmenu>li {
-    float: left;
-    width: 20%;
-    position: relative;
-}
-
-ul.submenu {
-    width: 50%;
-    box-shadow: rgb(51, 51, 51) 5px 5px 15px;
-    position: absolute;
-}
-
-/* =================
-     Mobile Styles 
-   ================= */
-@media only screen and (max-width: 480px) {
-    nav.horizontal a {
-        font-size: 0.5em;
-        line-height: 2.2em;
-    }
-
-    a#navicon {
-        display: block;
-    }
-
-
-
-    a#navicon:hover+ul,
-    nav.horizontal ul:hover {
-        display: block;
-    }
-}
-
-/* =================
-     Tablet Styles 
-   ================= */
-
-ul.mainmenu>li {
-    float: left;
-    width: 20%;
-    position: relative;
-}
-
-ul.submenu {
     width: 100%;
     box-shadow: rgb(51, 51, 51) 5px 5px 15px;
     position: absolute;
     line-height: 25px;
     background-color: rgb(221, 247, 248);
 }
+/* The selector states that the li element which is a child of the ul element with a class of mainmenu will be affected byt eh styles listed. The position property states that the position of the element will be relative to the page.*/
+ul.mainmenu>li {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+/* The selector below states that the a element with a class of submenuTitle along with the ul element with a class of submenu will be affected in a state of hover. */
+a.submenuTitle:hover+ul.submenu,
+ul.submenu:hover {
+    display: block;
+}
+
+/* Navicon Styles */
+/* The selector states that the a element with an id of navicon will be affected by the styles listed. The display property states that the element will not be displayed on the page.  */
+a#navicon{
+    display: none;
+}
+/* Description List Styles */
+/* Styles within this section will affect the description list elements withn the HTML document. */
+/* Properties within the selector below will affect the dt elements in the HTML document. The font weight property makes the affected text bold. The text decoration property states that the  text will be underlined. */
+dt {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+/* Styles within this selector will affect the dd elements within the HTML document. */
+dd {
+    text-align: center;
+}
+
+/* Article Styles */
+/* Styles within this section will affect the article element in the HTMl document. */
+section article {
+    float: left;
+    height: 100%;
+    line-height: 20px
+}
+/* The selector below states that the img element nested within the article element will have a width of 100%. */
+article img{
+    width: 100%;
+}
+
+/* Aside Styles */
+/* Styles within this section will affect the aside element in the HTMl document. */
+/* The selector below states that the aside element that is a child of the section element will be affected by the styles provided. The padding bottom property states that the element will have a 20px padding space at the bottom of it.  */
+section aside {
+    float: left;
+    background-color: rgb(136, 235, 248);
+    line-height: 32px;
+    padding-bottom: 20px
+}
+
+/* Footer Styles */
+/* Styles within ths section will affect the footer element of the HTML document. */
+/* The selector below states that the footer will have the properties listed applied to it.  */
+footer {
+    background-color: rgba(16, 18, 19, 0.918);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    width: 100%;
+}
+/* The selector states that properties within will affect the img element nested within the footer element.  */
+footer img{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* The selector states that properties listed will be applied to the p element with a class of col which is nested within the footer. */
+footer p.col{
+    width: 33%;
+    float: left;
+    padding-right: 5px;
+}
+/* The selector below states that the footer element will be affected by properties listed within. The after pseudo-element states that the selector is being applies to the last child of the selected element. The properties listed within  prevent container collapse wtihin the footer element  */
+footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* The comment above applies to this code block as well, the only difference being that the section element is being affected rathr than the footer element */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* The selector states that the a element nested within the p element nested within the footer element will be affected by the styles listed. */
+footer p a{
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(158, 214, 240);
 }
 
 /* =================
+     Mobile Styles 
+   ================= */
+   /* Styles within this section will affect mobile measurment viewports (any screen with a width of 480px or smaller). */
+@media only screen and (max-width: 480px) {
+    /* The selector states that the a element with an id of navicon will be affected by the styles listed.  */
+    a#navicon {
+        display: block;
+        float: left;
+    }
+    /* The selector states that the ul element nested within the nav element with a class of horizontal will be affected.  */
+    nav.horizontal ul{
+        display: none;
+    }
+    /* The selector states that the aside element will be affected by the property listed.  */
+    aside{
+        display: none;
+    }
+    /* The selector states that the article element nested within the section element will be affected by the property listed.  */
+    section article{
+        width: 100%
+    }
+    /* The selector states that the footer element will be affected by the style provided.  */
+    footer{
+        width:100%;
+    }
+    /* The selector states that the a element nested in the nav element with a class of horizontal will be affected by the styles provided.  */
+    nav.horizontal a {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    /* The selector below states that the a element with an id of navicon along with the ul element nested in the nav.horizontal element will be affected in a state of hover. */
+    a#navicon:hover+ul,
+    nav.horizontal ul:hover {
+        display: block;
+        width: 100%;
+    }
+    /* The selector states that the li element nested in the ul element nested in the nav element with a class of horizontal will be affected by the styles listed. */
+    nav.horizontal ul li {
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+    /* The selector states that the p element with a class of col nested in the footer element will be affected by the styles listed. */
+    footer p.col {
+        width: 100%;
+        text-align: center;
+    }
+    /* The selctor states that the ul element with a class of submenu nested within the ul element with a class of mainmenu nested within the nav element with a class of horizontal will have the styles listed applied to it. */
+    nav.horizontal ul.mainmenu ul.submenu{
+        display: none;
+    }
+}
+
+/* =================
+     Tablet Styles 
+   ================= */
+   /* Styles within this section will affect tablet measurment viewports (any screen with a width of 481px or larger). */
+   @media only screen and (min-width: 481px) {
+/* Styles within the selector below will be applied to the aside element in the HTML document that is nested within the section element. */
+section aside{
+    width: 100%;
+}
+/* Styles within this selector will affect the article element nested within the section element. */
+ section article{
+    width: 100%;
+}
+/* Styles within this section will be applied to the ul with an id of submenu. */
+ul.submenu {
+    width: 250%;
+}
+/* The selector below states that bot the p elements with an id of either col-1 or col-2 nested within the footer will be affected by the styles provided. */
+footer p#col-1,
+footer p#col-2{
+    float: left;
+    text-align: center;
+    width: 50%;
+    margin: 0px;
+}
+/* The selector below states that the p element with an id of col-3 that is nested within the fotter element will be affected by the styles listed. */
+footer p#col-3{
+    text-align: center;
+    width: 100%;
+}
+}
+/* =================
      Desktop Styles 
    ================= */
+   /* Styles within this section will affect desktop measurment viewports (any screen with a width of 769px or larger). */
+   @media only screen and (min-width: 769px) {
+    /* Styles within the selector below will afect the article element nested within the section element. */
+    section article {
+        width: 60%;
+    }
+    /* Styles within the selector will affect the aside element nested within the section element. */
+    section aside {
+        width: 40%;
+    }
+    /* Styles within will affect the ul element with a class of submenu. */
+    ul.submenu {
+        width: 100%;
+    }
+    /* Styles liset will be applied to the p elements with the ids of col-1, col-2, and col-3 nested within the footer element. The justify content property justifies the content within along the main x azis in the flexbox. */
+    footer p#col-1,
+    footer p#col-2,
+    footer p#col-3{
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    margin: 5px;
+}
+}

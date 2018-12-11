@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Beginning of document. -->
 <html>
 
 <head>
@@ -17,27 +18,38 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Jersey Buoys Surfing School</title>
-      <link rel="stylesheet" href="jb_reset.css" />
+      <link rel="stylesheet" href="jb_reset.css"  />
       <link rel="stylesheet" href="jb_styles.css" />
+      <link rel="stylesheet" href="jb_flexstyles.css">
 </head>
-
+<!-- Beginning of content displayed on the webpage for the user. -->
 <body>
       <header>
             <img src="bannerimg.jpg" alt="">
+            <!-- Beginning of nav with a class of horizontal. -->
             <nav class="horizontal">
+                  <!-- Beginning of a with id of navicon -->
+                  <a id="navicon" href="#">
+                        <img src="jb_navicon.png" alt="navicon">
+                  </a>
+                  <!-- End of a with id of navicon. -->
+                  <!-- Beginning og ul with class of mainmenu. -->
                   <ul class="mainmenu">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#" >Home</a></li>
                         <li><a href="#" class="submenuTitle">Classes</a>
+                              <!-- Beginning of ul with class of submenu -->
                               <ul class="submenu">
-                                    <li><a href="">Intro Surfing</a></li>
+                                    <li><a href="#">Intro Surfing</a></li>
                                     <li><a href="#">Surfing I</a></li>
                                     <li><a href="#">Surfing II</a></li>
                                     <li><a href="#">Surfing III</a></li>
                                     <li><a href="#">Master Surfing</a></li>
                               </ul>
+                              <!-- End of ul with class of submenu -->
                         </li>
 
                         <li><a href="#" class="submenuTitle">Camps</a>
+                              <!-- Beginning of ul with class of submenu. -->
                               <ul class="submenu">
                                     <li><a href="#">1-Day Grommets</a></li>
                                     <li><a href="#">3-Day Grommets</a></li>
@@ -46,9 +58,11 @@
                                     <li><a href="#">Men's Retreat</a></li>
                                     <li><a href="#">Adult Excursions</a></li>
                               </ul>
+                              <!-- End of ul with class of submenu -->
                         </li>
 
                         <li><a href="#" class="submenuTitle">Store</a>
+                              <!-- Beginning of ul with class of submenu. -->
                               <ul class="submenu">
                                     <li><a href="#">Gear</a></li>
                                     <li><a href="#">Quiver</a></li>
@@ -57,12 +71,15 @@
                                     <li><a href="#">My Account</a></li>
                                     <li><a href="#">Tracking</a></li>
                               </ul>
+                              <!-- =End of ul with class of submenu. -->
                         </li>
 
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Staff</a></li>
                   </ul>
+                  <!-- =End of ul with class of mainmenu. -->
             </nav>
+            <!-- End of nav with class of horizontal. -->
       </header>
       <section>
             <article>
@@ -82,49 +99,58 @@
 
                   <p>The next big wave is approaching: Catch it with Jersey Buoys. Call to set up an
                         appointment, grab a board from the quiver and head to the Green Room.</p>
+                        <img src="jb_image03.png" alt="">
             </article>
             <aside>
                   <h1>Surfer Slang</h1>
                   <dl>
                         <dt>Barney</dt>
                         <dd>A new and inexperience surfer</dd>
-
-                        <dt>boost</dt>
+                        <hr>
+                        <dt>Boost</dt>
                         <dd>To take off from a wave into an aerial</dd>
-
-                        <dt>cutback</dt>
+                        <hr>
+                        <dt>Cutback</dt>
                         <dd>To change direction when streaking ahead of the curl</dd>
-
-                        <dt>gandolf</dt>
+                        <hr>
+                        <dt>Gandolf</dt>
                         <dd>An experienced wise older surfer</dd>
-
-                        <dt>green room</dt>
+                        <hr>
+                        <dt>Green room</dt>
                         <dd>The inside of a tube</dd>
-
-                        <dt>grommet</dt>
+                        <hr>
+                        <dt>Grommet</dt>
                         <dd>A very young surfer, a child</dd>
-
-                        <dt>gurfer</dt>
+                        <hr>
+                        <dt>Gurfer</dt>
                         <dd>A girl surfer</dd>
-
-                        <dt>hobble-bobble</dt>
+                        <hr>
+                        <dt>Zhobble-bobble</dt>
                         <dd>An aerial launch while flapping your arms like a bird</dd>
-
-                        <dt>quiver</dt>
+                        <hr>
+                        <dt>Quiver</dt>
                         <dd>A collection of surfboards</dd>
                   </dl>
             </aside>
       </section>
-
-      <section>
             <footer>
-                  Follow us on Facebook and Twitter!
-                  <img src="fbicon.png" alt="Facebook">
-                  <img src="twittericon.png" alt="">
+                        <p class="col" id="col-1">Jersey Buoys
+                              <br>
+                                    Owner: Tony Gallo
+                              <br><a href="#">(609) 555-7873</a> <br>
+                              <a href="#">gall@example.com/surf</a></p>
+                        
+                        <p class="col" id="col-2">MAILING ADDRESS <br>
+                                    141 Hodad Drive <br>
+                                    Ocean City, NJ 08226</p>
+                        
+                       <p class="col" id="col-3"> Follow us on Facebook and Twitter!<img src="fbicon.png" alt="Facebook">
+                        <img src="twittericon.png" alt="">
+                       </p>
             </footer>
-      </section>
 
 
 </body>
-
+<!-- End of content displayed on the webpage for the user. -->
+<!-- End of document -->
 </html>
